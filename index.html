@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <!--声明当前网页的三要素-->
+    <meta name="Keywords" content="表白墙">
+    <meta name="Description" content="Skyler为Lin制作的表白网页。">
+    <title>爱心表白墙</title>
+    <embed src="music.mp3" hidden="true" autostart="true" loop="true"/>
+
+    <!--css样式（层叠样式表）-->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /*star love*/
+        body{
+            background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1547298369142&di=0aae33917af4bf1b0de18216041e6626&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Fback_pic%2F04%2F98%2F64%2F09593ac0a58c557.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            overflow: hidden;
+        }
+        #title{
+            width: auto;
+            height: auto;
+            text-align: center;
+            font-family: 楷体;
+            font-size: 20px;
+            color: pink;
+        }
+        .love{
+            width: 590px;
+            height: 500px;
+            margin: 54px auto;
+        }
+        .love ul li{
+            list-style: none;
+            text-align: center;
+            font-size: 0;
+        }
+        .love ul li a{
+            position: relative; /*相对定位*/
+            width: 75px;
+            height: 75px;
+            display: inline-block;
+            margin: 4px;
+            background: url("images/lbb.jpg");
+            background-size: cover;
+            border-radius: 4px;
+            opacity: 0;
+        }
+        /*end love*/
+        @keyframes fadeInDown{
+            from{
+                bottom: -2000px;
+                transform: scale(5);
+                opacity: 1;
+            }
+            to{
+                bottom: 0;
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <p id="title">
+        <strong>牵着我的手，闭着眼睛走你也不会迷路</strong>
+    </p>
+    <!--love start-->
+    <div class="love">
+        <!--ul 无序列表标签-->
+        <ul>
+            <li>
+                <a href="Javascript:void(0)"></a>
+                <a href="Javascript:void(0)"></a>
+                <b style="display: inline-block;width: 75px;height: 75px;margin: 4px;"></b>
+                <a href="Javascript:void(0)"></a>
+                <a href="Javascript:void(0)"></a>
+            </li>
+            <li>
+                <a href="Javascript:void(0)"></a>
+                <a href="Javascript:void(0)"></a>
+                <a href="Javascript:void(0)"></a>
+                <a href="Javascript:void(0)"></a>
+                <a href="Javascript:void(0)"></a>
+                <a href="Javascript:void(0)"></a>
+                <a href="Javascript:void(0)"></a>
+            </li>
+            <li>
+                <a href="Javascript:void(0)"></a>
+                <a href="Javascript:void(0)"></a>
+                <a href="Javascript:void(0)"></a>
+                <a href="Javascript:void(0)"></a>
+                <a href="Javascript:void(0)"></a>
+                <a href="Javascript:void(0)"></a>
+                <a href="Javascript:void(0)"></a>
+            </li>
+            <li>
+                <a href="Javascript:void(0)"></a>
+                <a href="Javascript:void(0)"></a>
+                <a href="Javascript:void(0)"></a>
+                <a href="Javascript:void(0)"></a>
+                <a href="Javascript:void(0)"></a>
+            </li>
+            <li>
+                <a href="Javascript:void(0)"></a>
+                <a href="Javascript:void(0)"></a>
+                <a href="Javascript:void(0)"></a>
+            </li>
+            <li>
+                <a href="Javascript:void(0)"></a>
+            </li>
+        </ul>
+    </div>
+    <!--love end-->
+
+    <!--Javascript-->
+    <script>
+        /*控制每一个a标签的位置移动*/
+        // 1.获取所有的a标签  声明一个名为a的空间
+        let a = document.getElementsByTagName("a");
+        // 2.获取每一个a标签   a.length是遍历，放在循环里会浪费性能
+        for (let i = 0, j = a.length; i < j; i++) {
+            a[i].style.animation = "fadeInDown 1s " + i*0.2 + "s forwards";
+        }
+    </script>
+
+</body>
+</html>
